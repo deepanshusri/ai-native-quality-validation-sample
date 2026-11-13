@@ -9,7 +9,7 @@ assignee: 620998
 environment_id: 347594
 
 # Test URL for automation
-test_url: "https://deepanshusri.github.io/ai-native-quality-validation-sample/""
+test_url: "https://deepanshusri.github.io/ai-native-quality-validation-sample/"
 
 # scenarios set up
 scenario_limit: 2
