@@ -11,6 +11,6 @@ environment_id: 347594
 # Test URL for automation
 test_url: "https://deepanshusri.github.io/ai-native-quality-validation-sample/""
 
-#scenarios set up
+# scenarios set up
 scenario_limit: 2
 test_cases_per_scenario: 3
