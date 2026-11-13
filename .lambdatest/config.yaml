@@ -1,12 +1,12 @@
 # LambdaTest Configuration
 
 # Project and folder configuration
-project_id: "01JXAB4JXW85351V5NFXR14B75"
-folder_id: "01KPNJZMV40JTT6SF9QQR3YKS1"
+project_id: "01M7A13XHVEWXDHGEF3DZ92W8Q"
+folder_id: "01M7A14P4E29K132GVFF1MET5X"
 
 # Test Run configuration
 assignee: 620998
 environment_id: 347594
 
 # Test URL for automation
-test_url: "https://www.sobeys.com/"
+test_url: "https://www.airbnb.com/"
