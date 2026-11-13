@@ -309,12 +309,16 @@ const ListingDetail = () => {
                   <span>${listing.price * nights}</span>
                 </div>
                 <div className="flex justify-between text-gray-600">
+                  <span>Cleaning fee</span>
+                  <span>$45</span>
+                </div>
+                <div className="flex justify-between text-gray-600">
                   <span>Service fee</span>
                   <span>${Math.round(totalPrice * 0.14)}</span>
                 </div>
                 <div className="border-t border-gray-300 pt-2 flex justify-between font-semibold">
                   <span>Total</span>
-                  <span>${totalPrice + Math.round(totalPrice * 0.14)}</span>
+                  <span>${totalPrice + Math.round(totalPrice * 0.14) - 45}</span>
                 </div>
               </div>
             )}
