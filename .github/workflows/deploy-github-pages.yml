@@ -65,7 +65,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '22'
           cache: 'npm'
           cache-dependency-path: frontend/package-lock.json
 
@@ -127,7 +127,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: frontend-build
-          path: _build
+          path: ${{ runner.temp }}/frontend-build
 
       - name: Determine target directory
         id: target
@@ -144,12 +144,11 @@ jobs:
           if [ "$TARGET" = "." ]; then
             # For main: remove all files except pr-* directories and .git
             find . -maxdepth 1 ! -name '.' ! -name '.git' ! -name 'pr-*' -exec rm -rf {} +
-            cp -r _build/* .
+            cp -r "$RUNNER_TEMP/frontend-build/." .
           else
             rm -rf "$TARGET"
-            cp -r _build "$TARGET"
+            cp -r "$RUNNER_TEMP/frontend-build" "$TARGET"
           fi
-          rm -rf _build
 
       - name: Commit and push
         run: |
